@@ -22,7 +22,7 @@ app.use(express.json())
 
 app.use(cookieParser())
 
-app.use('/senddata', require('./routes/api/signup'))
+app.use('/', require('./routes/api/signup'))
 
 mongoose.connection.once('open', () => {
     console.log('connected to MongoDB');
