@@ -7,7 +7,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
 connectDB();
-URL = process.env.PORT || 5000
+MYURL = process.env.PORT || 5000
 
 /* const corsOptions = {
     origin: 'http://localhost:3000/',
@@ -26,5 +26,5 @@ app.use('/', require('./routes/api/signup'))
 
 mongoose.connection.once('open', () => {
     console.log('connected to MongoDB');
-    app.listen(URL, () => {console.log(`We are live on port ${URL}`)})
+    app.listen(MYURL, () => {console.log(`We are live on port ${URL}`)})
 })
